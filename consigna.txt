@@ -1,0 +1,51 @@
+Diseñando con Algoritmos | Laboratorio Semana 3
+Web Components
+
+Descripción:
+
+En este laboratorio, los estudiantes de manera individual deberán replicar un landing de una página web donde se evidencie el uso de Web Componentes en javascript. 
+
+Requisitos:
+
+Elegir una de las 3 opciones de páginas web del apartado 3.
+Utilizar node.js para la configuración del proyecto
+Hacer uso correcto del file system:
+
+proyecto
+├── public/
+│   ├── src/
+│   │   └── components/
+│   │   │   └── myComponent/
+│   │   │   │   ├── myComponent.js
+│   │   │   │   └── myComponent.css
+│   │   │   └── indexPadre.js
+│   │   └── indexAbuelo.js
+│   ├── index.html
+│   └── index.css
+
+Diseñar y desarrollar componentes reutilizables y modulares con Web Components creados mediante etiquetas EN JAVASCRIPT, NO EN HTML encapsulando estilos, para lograr que sean lo más fieles posible a la página web original seleccionada (Sin funcionalidades).
+No es obligatorio hacer el footer de la página.
+
+	(Footer de nintendo)
+
+
+
+
+
+Opciones de páginas:
+
+-Ubisoft
+https://www.ubisoft.com/en-us/
+
+-Marvel
+https://www.marvel.com
+
+-Activision
+https://www.activision.com/es/home
+
+
+Entregables
+	
+Link del repositorio en Git
+
+

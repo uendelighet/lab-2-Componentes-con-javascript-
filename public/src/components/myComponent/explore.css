@@ -1,0 +1,10 @@
+.cardExplore {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    width: 200px;
+}
+
+.thumbnail {
+    width: 200px;
+}

@@ -1,0 +1,1 @@
+export {default as game-card} from './game-card/explore.js'
