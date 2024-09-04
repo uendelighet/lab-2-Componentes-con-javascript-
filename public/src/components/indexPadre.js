@@ -1,1 +1,1 @@
-export {default as game-card} from './game-card/explore.js'
+export {default as Card} from './myComponent/explore.js'

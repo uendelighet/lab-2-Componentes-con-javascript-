@@ -14,19 +14,21 @@ this.render();
 };
 
 attributeChangedCallback(propName, oldValue, newValue){ 
-this(oldValue !== newValue) //valor anterior es diferente al valor nuevo
+if (oldValue !== newValue) {//valor anterior es diferente al valor nuevo
     this[propName] = newValue;
     this.render();
+}
 };
 
 render(){ //aqui se crea el html
-this.shadowRoot.innerHTML = ''
+this.shadowRoot.innerHTML = `
 <link rel="stylesheet" href="./src/components/myComponent/explore.css">
 <div class="cardExplore">
-<thumbnail class="portadas" src=${this.thumbnail} alt="">
+<img class=portadas" src=${this.thumbnail} alt="">
 <h1>${this.title}</h1>
-</div>
+</div>`
 ;
-
+}
+}
 customElements.define('game-card', Card);
-export default game-card;
+export default Card;

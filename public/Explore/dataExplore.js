@@ -1,4 +1,4 @@
-export const dataExplore [
+export const dataExplore = [
     {
         title:"Star Wars",
         thumbnail:'https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/51bQpXtlo48CyMrxj8F1RU/8cc9f5ae3fa67c590b7d6d2ca51e883c/swo-boxshot.jpg?imwidth=360',

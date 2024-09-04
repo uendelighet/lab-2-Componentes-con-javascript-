@@ -1,8 +1,12 @@
+* {
+    background-color: black;
+}
+
 .cardExplore {
     display: flex;
     flex-wrap: wrap;
     background-color: black;
-    width: 200px;
+
 }
 
 .thumbnail {
