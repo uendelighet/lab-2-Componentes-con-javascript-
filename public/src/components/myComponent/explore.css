@@ -1,11 +1,11 @@
 * {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .cardExplore {
     display: flex;
-    flex-wrap: wrap;
-    background-color: black;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
 
 }
 

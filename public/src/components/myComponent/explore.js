@@ -21,14 +21,28 @@ if (oldValue !== newValue) {//valor anterior es diferente al valor nuevo
 };
 
 render(){ //aqui se crea el html
-this.shadowRoot.innerHTML = `
+this.shadowRoot.innerHTML += `
 <link rel="stylesheet" href="./src/components/myComponent/explore.css">
 <div class="cardExplore">
 <img class=portadas" src=${this.thumbnail} alt="">
 <h1>${this.title}</h1>
+<div class="icons-container">
+
+</div> 
+
 </div>`
 ;
+
+const containerIcons = document.querySelector(".icons-container")
+console.log(containerIcons)
+console.log(`Card: ${this.icons}`)
+// this.icons.forEach((elemento) => {
+//     const icon = document.createElement('img')
+//     icon.src = {elemento}
+//     containerIcons.appendChild(icon) //hamburguesa.appenchild(lechuga, tocino, cebolla, pan)
+// });
 }
 }
+
 customElements.define('game-card', Card);
 export default Card;

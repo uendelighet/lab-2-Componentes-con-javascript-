@@ -31,11 +31,12 @@ render() { //aqui van los componentes
     //}
 
     dataExplore.forEach((element) => {
+      console.log("abuelo", element.icons)
         this.shadowRoot.innerHTML += `
       <game-card
     title="${element.title}"
     thumbnail="${element.thumbnail}"
-    icon="${element.icons}">
+    icons="${element.icons}">
       </game-card>
         `;
     });
