@@ -10,50 +10,20 @@ cards = [];
     this.attachShadow({mode: "open"}) //aqui se encapsula y de envia al DOM. Lo de open es para que lo encuentre.
 }
 
-  
-// crt k c
-// attributeChangedCallback(propName, oldValue, newValue){
-// if(oldValue!==newValue){
-//     this[propName] = newValue;
-//     this.render()
-// }
-// }
-
 connectedCallback(){ //cuando el Dom lo encuentra, esta vaina ejecuta el codigo
 this.render();
 }
 
-render() { //aqui van los componentes
-    //this.ShadowRoot.innerHTML = '';
+render() {
+  dataExplore.forEach((element) => {
 
-    //this.dataExplore.forEach((gameCard) => {
-        //this.ShadowRoot.appenchild(gameCard);
-    //}
-this.shadowRoot.innerHTML = `
- <div class="games-container"> 
-  </div> 
-
-  `
-    
-const containerGames = document.querySelector(".games-container")
-console.log(containerGames)
-
-
-
-    dataExplore.forEach((element) => {
-      const card = this.ownerDocument.createElement('game-card')
-      
-      console.log("abuelo", element.icons)
-        this.shadowRoot.innerHTML += `
-      <game-card
-    title="${element.title}"
-    thumbnail="${element.thumbnail}"
-    icons="${element.icons}">
-      </game-card>
-        `;
-    });
+    const gameCard = document.createElement('game-card');
+    gameCard.setAttribute('title', element.title);
+    gameCard.setAttribute('thumbnail', element.thumbnail);
+    gameCard.icons = element.icons;
+    this.shadowRoot.appendChild(gameCard);
+  });
+}
 }
 
-
-}
 customElements.define('app-container', AppContainer);

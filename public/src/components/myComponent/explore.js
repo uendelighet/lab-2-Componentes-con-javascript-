@@ -6,7 +6,7 @@ constructor(){
     }
 
 static get observedAttributes(){ //aqui se crea el dinamismo jsjs
-    return ['title', 'thumbnail', 'icons']
+    return ['title', 'thumbnail']
     }
 
 connectedCallback(){ //permite saber cuando el render ya esta en el dom
@@ -26,17 +26,17 @@ this.shadowRoot.innerHTML = `
 <div class="cardExplore">
 <img class=portadas" src=${this.thumbnail} alt="">
 <h1>${this.title}</h1>
-<div class="icons-container">
+<div class="icons-container"> </div> 
+</div>
+`;
 
-</div> 
+const containerIcons = this.shadowRoot.querySelector(".icons-container");
 
-</div>`
-;
-
-const containerIcons = document.querySelector(".icons-container")
-console.log(containerIcons)
-const icons = this.icons
-console.log(`Card: ${icons}`)
+this.icons.forEach(elemento => {
+    const iconElement = this.ownerDocument.createElement('img');
+    iconElement.src = elemento;
+    containerIcons.appenchild(iconElement);
+});
 
 }
 }
