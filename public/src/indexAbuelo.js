@@ -1,4 +1,4 @@
-import { dataExplore } from '../Explore/dataExplore.js';
+import { dataExplore } from './data/dataExplore.js';
 import * as components from './components/indexPadre.js';
 
 
@@ -29,8 +29,20 @@ render() { //aqui van los componentes
     //this.dataExplore.forEach((gameCard) => {
         //this.ShadowRoot.appenchild(gameCard);
     //}
+this.shadowRoot.innerHTML = `
+ <div class="games-container"> 
+  </div> 
+
+  `
+    
+const containerGames = document.querySelector(".games-container")
+console.log(containerGames)
+
+
 
     dataExplore.forEach((element) => {
+      const card = this.ownerDocument.createElement('game-card')
+      
       console.log("abuelo", element.icons)
         this.shadowRoot.innerHTML += `
       <game-card
