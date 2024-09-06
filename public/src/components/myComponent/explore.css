@@ -3,14 +3,29 @@
 }
 
 .cardExplore {
-    display: flex;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        margin-right: 10px;
+      }
+
+.icon {
+    width: 15px;
+    margin-right: 10px;
+}
+
+
+
+
+    /* display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     width: 50px;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 
-}
+
 
 .thumbnail {
     width: 200px;

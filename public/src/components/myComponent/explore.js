@@ -31,9 +31,10 @@ class Card extends HTMLElement {
 
 		const iconsContainer = this.shadowRoot.querySelector('.icons-container');
 
-			this.icons.forEach((elemento) => {
+			this?.icons.forEach((elemento) => {
 				const iconElement = this.ownerDocument.createElement('img');
 				iconElement.src = elemento;
+                iconElement.className = "icon"
 				iconsContainer.appendChild(iconElement);
 			});
 		
